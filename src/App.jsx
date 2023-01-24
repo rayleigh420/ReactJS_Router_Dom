@@ -13,7 +13,7 @@ function App() {
         </Routes>
       </div>
 
-      <Link to="/home">Home</Link>
+      <Link to="/home">Home Page</Link>
     </>
   );
 }
