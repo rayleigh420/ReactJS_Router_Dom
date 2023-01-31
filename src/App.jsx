@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 import "./App.css";
 import Home from "./pages/Home";
+import Naviagtion from "./pages/Navigation";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <Routes>
-          <Route index path="/home" element={<Home />} />
-        </Routes>
-      </div>
-
-      <Link to="/home">Home</Link>
+      <Routes>
+        <Route path="/" element={<Naviagtion />}>
+          <Route path="/home" element={<Home />} />
+        </Route>
+      </Routes>
     </>
   );
 }
